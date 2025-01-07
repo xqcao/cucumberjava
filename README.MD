@@ -4,7 +4,7 @@ This guide explains how to set up Cucumber tests for the Person API's add person
 
 ## Required Files
 
-src/
+src/test/
 ├── java
 │   └── com
 │       └── clinecode
@@ -18,7 +18,6 @@ src/
 └── resources
     └── features
         └── add_person.feature
-
 
 
 ## Setup
