@@ -24,8 +24,7 @@ src/test/
 
 ### 1. Maven Dependencies
 Add the following to your `pom.xml`:
-<pre>
-<code>
+```xml
 <dependency>
 <groupId>io.cucumber</groupId>
 <artifactId>cucumber-java</artifactId>
@@ -49,8 +48,7 @@ Add the following to your `pom.xml`:
 <artifactId>junit-platform-suite</artifactId>
 <scope>test</scope>
 </dependency>
-</code>
-</pre>
+```
 ### 2. Test Files
 
 #### Feature File
