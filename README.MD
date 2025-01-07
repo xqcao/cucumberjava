@@ -24,6 +24,7 @@ src/test/
 
 ### 1. Maven Dependencies
 Add the following to your `pom.xml`:
+<pre>
 <dependency>
 <groupId>io.cucumber</groupId>
 <artifactId>cucumber-java</artifactId>
@@ -47,13 +48,13 @@ Add the following to your `pom.xml`:
 <artifactId>junit-platform-suite</artifactId>
 <scope>test</scope>
 </dependency>
-
+</pre>
 ### 2. Test Files
 
 #### Feature File
 Create `add_person.feature`:
 gherkin
-
+<pre>
 Feature: Add Person
 As a user
 I want to add a new person
@@ -66,10 +67,12 @@ When I send a request to add the person
 Then the person should be successfully created
 And the response should contain the person details
 
+</pre>
 #### Step Definitions
 Create `AddPersonSteps.java`:
 
 java
+<pre>
 @Given("I have person details to add")
 public void i_have_person_details_to_add(DataTable dataTable) {
 List<Map<String, String>> rows = dataTable.asMaps();
@@ -98,12 +101,17 @@ assertEquals(personToAdd.getLastName(), createdPerson.getLastName());
 assertEquals(personToAdd.getEmail(), createdPerson.getEmail());
 assertEquals(personToAdd.getAge(), createdPerson.getAge());
 }
+</pre>
 java
+<pre>
 @CucumberContextConfiguration
 @SpringBootTest(classes = OneclineApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
 public class CucumberTestConfig {
 }
+</pre>
+
 java
+<pre>
 @Suite
 @IncludeEngines("cucumber")
 @SelectClasspathResource("features")
@@ -111,6 +119,8 @@ java
 @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME, value = "pretty")
 public class CucumberRunnerTest {
 }
+</pre>
+
 bash
 mvn clean test
 
