@@ -71,7 +71,7 @@ And the response should contain the person details
 #### Step Definitions
 Create `AddPersonSteps.java`:
 
-java
+AddPersonSteps.java
 <pre>
 @Given("I have person details to add")
 public void i_have_person_details_to_add(DataTable dataTable) {
@@ -102,7 +102,7 @@ assertEquals(personToAdd.getEmail(), createdPerson.getEmail());
 assertEquals(personToAdd.getAge(), createdPerson.getAge());
 }
 </pre>
-java
+CucumberTestConfig.java
 <pre>
 @CucumberContextConfiguration
 @SpringBootTest(classes = OneclineApplication.class, webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -110,7 +110,7 @@ public class CucumberTestConfig {
 }
 </pre>
 
-java
+CucumberRunnerTest.java
 <pre>
 @Suite
 @IncludeEngines("cucumber")
