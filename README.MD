@@ -4,19 +4,20 @@ This guide explains how to set up Cucumber tests for the Person API's add person
 
 ## Required Files
 
-src/
-├── test/
-│ ├── java/
-│ │ └── com/clinecode/onecline/
-│ │ ├── config/
-│ │ │ └── CucumberTestConfig.java
-│ │ ├── stepdefs/
-│ │ │ └── AddPersonSteps.java
-│ │ ├── CucumberRunnerTest.java
-│ │ └── OneclineApplicationTests.java
-│ └── resources/
-│ └── features/
-│ └── add_person.feature
+📦 src/
+┣ 📂 test/
+┃ ┣ 📂 java/
+┃ ┃ ┗ 📂 com/clinecode/onecline/
+┃ ┃ ┃ ┣ 📂 config/
+┃ ┃ ┃ ┃ ┗ 📄 CucumberTestConfig.java
+┃ ┃ ┃ ┣ 📂 stepdefs/
+┃ ┃ ┃ ┃ ┗ 📄 AddPersonSteps.java
+┃ ┃ ┃ ┣ 📄 CucumberRunnerTest.java
+┃ ┃ ┃ ┗ 📄 OneclineApplicationTests.java
+┃ ┗ 📂 resources/
+┃ ┃ ┗ 📂 features/
+┃ ┃ ┃ ┗ 📄 add_person.feature
+
 
 
 
