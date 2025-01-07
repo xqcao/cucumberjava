@@ -24,6 +24,7 @@ src/test/
 
 ### 1. Maven Dependencies
 Add the following to your `pom.xml`:
+<pre>
 <code>
 <dependency>
 <groupId>io.cucumber</groupId>
@@ -49,6 +50,7 @@ Add the following to your `pom.xml`:
 <scope>test</scope>
 </dependency>
 </code>
+</pre>
 ### 2. Test Files
 
 #### Feature File
