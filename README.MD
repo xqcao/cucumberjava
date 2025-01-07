@@ -4,7 +4,26 @@ This guide explains how to set up Cucumber tests for the Person API's add person
 
 ## Required Files
 
-1. **Maven Dependencies** (pom.xml):
+src/
+├── test/
+│ ├── java/
+│ │ └── com/clinecode/onecline/
+│ │ ├── config/
+│ │ │ └── CucumberTestConfig.java
+│ │ ├── stepdefs/
+│ │ │ └── AddPersonSteps.java
+│ │ ├── CucumberRunnerTest.java
+│ │ └── OneclineApplicationTests.java
+│ └── resources/
+│ └── features/
+│ └── add_person.feature
+
+
+
+## Setup
+
+### 1. Maven Dependencies
+Add the following to your `pom.xml`:
 <dependency>
 <groupId>io.cucumber</groupId>
 <artifactId>cucumber-java</artifactId>
@@ -28,7 +47,13 @@ This guide explains how to set up Cucumber tests for the Person API's add person
 <artifactId>junit-platform-suite</artifactId>
 <scope>test</scope>
 </dependency>
+
+### 2. Test Files
+
+#### Feature File
+Create `add_person.feature`:
 gherkin
+
 Feature: Add Person
 As a user
 I want to add a new person
@@ -40,6 +65,10 @@ Given I have person details to add
 When I send a request to add the person
 Then the person should be successfully created
 And the response should contain the person details
+
+#### Step Definitions
+Create `AddPersonSteps.java`:
+
 java
 @Given("I have person details to add")
 public void i_have_person_details_to_add(DataTable dataTable) {
