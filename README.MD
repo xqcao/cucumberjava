@@ -3,7 +3,7 @@
 This guide explains how to set up Cucumber tests for the Person API's add person functionality.
 
 ## Required Files
-
+<pre> 
 src/test/
 ├── java
 │   └── com
@@ -19,7 +19,7 @@ src/test/
     └── features
         └── add_person.feature
 
-
+</pre> 
 ## Setup
 
 ### 1. Maven Dependencies
